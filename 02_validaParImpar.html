@@ -5,11 +5,23 @@
     */
 
     //ENTRADA
+    const nmr = Number(prompt("informe um número.").trim());
 
-    
     //PROCESSAMENTO
+    switch (nmr % 2) {
+        case 0:
+            alert("número é par.");
+            break;
 
-    
+        case 1: case -1:
+            alert("número é impar.");
+            break;
+
+        default:
+            alert("resposta inválida.");
+            break;
+    }
+
     //SAÍDA
 
 </script>

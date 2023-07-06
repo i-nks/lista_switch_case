@@ -12,10 +12,40 @@
 
     //ENTRADA
 
-    
+    const telefone = prompt(`Você telefonou para a vítima? (Responda "S" para sim e "N" para não.)`).trim()
+    const local = prompt(`Você esteve no local do crime? (Responda "S" para sim e "N" para não.)`).trim()
+    const mora = prompt(`Você mora perto da vítima? (Responda "S" para sim e "N" para não.)`).trim()
+    const divida = prompt(`Você devia para a vítima. (Responda "S" para sim e "N" para não.)`).trim()
+    const trabalho = prompt(`Você trabalhou para a vítima? (Responda "S" para sim e "N" para não.)`).trim()
+
     //PROCESSAMENTO
 
+    telefone == "s" ? valor1 = 1 : valor1 = 0;
+    local == "s" ? valor2 = 1 : valor = 0;
+    mora == "s" ? valor3 = 1 : valor = 0;
+    divida == "s" ? valor4 = 1 : valor = 0;
+    trabalho == "s" ? valor5 = 1 : valor = 0;
+
+    const final = valor1 + valor2 + valor3 + valor4 + valor5;
 
     //SAÍDA
+    switch (final) {
+        case 2:
+            alert(`Suspeito!`);
+            break;
+
+        case 3:
+        case 4:
+            alert(`Cúmplice!`);
+            break;
+
+        case 5:
+            alert(`Assasino!`);
+            break;
+
+        default:
+            alert(`Inocente!`);
+            break;
+    }
 
 </script>

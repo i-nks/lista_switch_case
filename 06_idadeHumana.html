@@ -9,10 +9,29 @@
 
     // ENTRADA
 
-    
+    const anos = Number(prompt(`Informe quantos anos tem seu cachorro.`).trim());
+    const porte = Number(prompt(`Informe o porte do seu cachorro. "1" para pequeno; "2" para médio; "3" para grande.`).trim());
+
     // PROCESSAMENTO
 
-    
+    switch (porte) {
+        case 1:
+            alert(`A idade canína de seu cachorro é de ${anos * 5} anos.`);
+            break;
+
+        case 2:
+            alert(`A idade canína de seu cachorro é de ${anos * 6} anos.`);
+            break;
+
+        case 3:
+            alert(`A idade canína de seu cachorro é de ${anos * 7} anos.`);
+            break;
+
+        default:
+            alert(`Resposta inválida.`);
+            break;
+    }
+
     // SAÍDA
 
-    </script>
+</script>
